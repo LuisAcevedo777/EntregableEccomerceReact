@@ -19,14 +19,14 @@ body {
 .pnav{
  
     width: 100vw;
-    height: 6rem;
+    height: 4rem;
     display: flex;
     flex-direction: row;
     
 }
 
 .nav{
-    height: 6rem;
+    height: 4rem;
     display: flex;
     flex-direction: row;
        align-items: center;
@@ -58,8 +58,9 @@ body {
 }
 
 .listSuggered {
-    margin-left: 5rem;
+    margin-left: 1rem;
     list-style: none;
+  
 }
 
 .ulistSuggered {
@@ -85,8 +86,8 @@ body {
 
 .imgUnique {
 
-
-    max-height: 500px;
+     max-width: 300px;
+    max-height: 600px;
 }
 
 div.col1 {
@@ -109,7 +110,7 @@ div.col1 {
     font-size: 20px;
 }
 .l1{
-    height: 6rem;
+    height: 4rem;
    width: 10vw;
   border-color: grey;
     border-style: solid;
@@ -135,7 +136,7 @@ div.col1 {
 
 .blockquote-footer{
 
-    width: 100vw;
+    width: 98vw;
     height: 30vh;
     background-color:rgb(63, 62, 62);
     display: flex;
@@ -162,4 +163,73 @@ div.col1 {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+}
+.btnInput{
+
+    color: #f85555;
+}
+
+/*detail*/
+.linkHome{
+
+    color: #f85555;
+    font-size: 2rem;
+}
+
+.cartButton1{
+    border-radius: 50%;
+  background-color: #f85555;;
+  width: 2rem;
+  height: 2rem;
+ margin-left: 8rem;
+}
+
+/*Description*/
+
+.descritptionTot{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.pricValue{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35vw;
+    height: 2rem;
+}
+.pricpric{
+
+    font-size: 15px;
+}
+.priceD{
+
+    color: #c7c7c7;
+    font-size: 20px;
+}
+.buttonDesc{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.count{
+ border-style: solid;
+    width: 2rem;
+    height: 2rem;
+}
+
+.addToCart{
+margin-top: 2rem;
+background-color: #f85555;
+    width: 35vw;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    padding: 15px;
+    width: 100%;
 }
