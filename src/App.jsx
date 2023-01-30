@@ -8,6 +8,8 @@ import Purchases from './pages/Purchases';
 import LoadingScreen from './components/LoadingScreen'
 import { useSelector } from 'react-redux';
 import { Container } from 'react-bootstrap'
+import AppFooter from './components/AppFooter';
+
 
 const App = () => {
 
@@ -31,7 +33,7 @@ const App = () => {
           </Routes>
         </Container>
 
-
+    <AppFooter/>
       </HashRouter>
     </div>
   );

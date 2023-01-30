@@ -9,6 +9,9 @@ import { Accordion, Card, InputGroup, Form, Row, Col, Button } from 'react-boots
 import '../App.css'
 
 const Home = () => {
+
+const [onMouseOv, setOnMouseOv]=useState(true)
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const seeProducts = useSelector(state => state.productsAll)
@@ -17,6 +20,8 @@ const Home = () => {
     //input
     const [newsSearch, setNewsSearch] = useState('')
     console.log(categories )
+    console.log(seeProducts)
+console.log(onMouseOv)
 
     useEffect(() => {
         dispatch(getProductsThunk())
@@ -25,6 +30,8 @@ const Home = () => {
             .then(res => setCategories(res.data))
 
     }, [])
+
+ 
 
     return (
         <div>
@@ -57,26 +64,31 @@ const Home = () => {
 
                     <InputGroup className="mb-3">
                         <Form.Control
-                            placeholder="Enter here your search"
+                            placeholder="What are you looking for?"
                             aria-label="Recipient's username"
                             aria-describedby="basic-addon2"
                             value={newsSearch}
                             onChange={e => setNewsSearch(e.target.value)}
                         />
                         <Button className='bg-info text-black' variant="outline-secondary" id="button-addon2" onClick={() => dispatch(filterProductsTitleThunk(newsSearch))}>
-                            Filter
+                        <i class="fa-solid fa-magnifying-glass"></i>
                         </Button>
                     </InputGroup>
                     <Row xs={1} md={2} lg={3} className="g-4">
                         {seeProducts.map(product => (
+
+                            //card
+
                             <Col>
                                 <Card onClick={() => navigate(`/product/${product.id}`)} key={product.id} >
-                                    <Card.Img className='imgCard' variant="top" src={product.images[0].url} />
+                                    <Card.Img className='imgCard' variant="top" onMouseOver={()=>setOnMouseOv(false)}  onMouseOut={()=>setOnMouseOv(true)} src={onMouseOv ? product.images[1].url : product.images[2].url} />
                                     <Card.Body className='cardHome'  >
                                         <Card.Title>{product.title}</Card.Title>
 
-                                        <Card.Text>Price: {product.price}   </Card.Text> <Card.Text>Date At Creation:  {product.createdAt} </Card.Text>
+                                        <Card.Text className='nav1'> <span className='sp1'>Price:</span>  {product.price}   </Card.Text> <Card.Text className='Nav1'><span className='sp1'>Date At Creation:</span> <br />  {product.createdAt} </Card.Text>
+
                                     </Card.Body>
+                                    <button className='cartButton'><i class="fa-solid fa-cart-shopping"></i></button>
                                 </Card>
                             </Col>
                         ))}
@@ -88,9 +100,11 @@ const Home = () => {
 
                 </Col>
 
-
+                
             </Row>
+             
 
+            
         </div>
     );
 };
