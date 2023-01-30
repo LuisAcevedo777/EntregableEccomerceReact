@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: blue;
+    max-width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.pnav{
+ 
+    width: 100vw;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.nav{
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+       align-items: center;
+    margin: 0 2rem;
+}
+.nav1{
+
+    font-size: 25px;
+}
+
+.imageProduct {
+
+    width: 3rem;
+}
+
+.Accordion {
+    position: fixed;
+    cursor: pointer;
+}
+
+
+
+.imgCard {
+
+    object-fit: contain;
+    height: 200px;
+}
+
+.listSuggered {
+    margin-left: 5rem;
+    list-style: none;
+}
+
+.ulistSuggered {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: scroll;
+
+}
+
+.imgSuggered {
+    height: 100px;
+    object-fit: contain;
+    width: 100px;
+}
+
+.titleSuggered {
+
+    font-size: 12px;
+}
+
+.imgUnique {
+
+
+    max-height: 500px;
+}
+
+div.col1 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cardHome {
+
+    height: 200px;
+}
+
+
+.ecomerce{
+
+    font-size: 20px;
+}
